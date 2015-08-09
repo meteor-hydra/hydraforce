@@ -1,3 +1,10 @@
+Template.navbar.events({
+  'click .logout': function (e) {
+    e.preventDefault();
+    Meteor.logout();
+  }
+});
+
 Template.navbar.helpers({
   typeaheadData: function() {
     return [
