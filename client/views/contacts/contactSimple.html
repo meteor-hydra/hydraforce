@@ -1,0 +1,17 @@
+<template name="contactSimple">
+  <div class="container">
+    <div class="card shadow" style="margin-top:10px;">
+      <div class="row">
+          <div class="col-sm-4">
+              <h2><a href="{{pathFor 'contact' _id}}">{{name}}</a></h2>
+              <span><span class="glyphicon glyphicon-earphone"></span> {{ phone }}</span><br />
+              <span><span class="glyphicon glyphicon-envelope"></span> {{ email }}</span>
+          </div>
+          <div class="col-sm-8">
+            <h4><b>Notes</b></h4>
+            <span>{{ notes }}</span>
+          </div>
+      </div>
+    </div>
+  </div>
+</template>
