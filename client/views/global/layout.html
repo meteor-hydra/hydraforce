@@ -1,6 +1,11 @@
 <template name="layout">
   {{> navbar}}
+  {{> sidenav }}
+
   <div class="wrapper">
-    {{> yield}}
+    {{> subnav}}
+    <div class="page-content-wrapper content-shadow">
+      {{> yield}}
+    </div>
   </div>
 </template>
