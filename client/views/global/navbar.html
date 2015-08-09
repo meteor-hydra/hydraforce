@@ -6,7 +6,7 @@
           <a class="navbar-brand" href="#">HydraForce</a>
         </div>
         <div class="col-sm-5 col-sm-offset-1 hidden-xs">
-          <input type="text" class="nav-search" placeholder="Who are you contacting today?">
+          <input class="nav-search"/>
           <span class="glyphicon glyphicon-search nav-search-icon"></span>
         </div>
         <div class="col-sm-3 hidden-xs">
@@ -58,4 +58,8 @@
 
   </div>
 
+</template>
+
+<template name="customTypeahead">
+  <p id="{{_id}}">{{ name }} </p>
 </template>
