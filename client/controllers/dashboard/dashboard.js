@@ -5,3 +5,7 @@ UI.registerHelper("arrayify", function(obj){
     }
     return result;
 });
+
+UI.registerHelper("eq", function(one, two){
+    return one == two;
+});
