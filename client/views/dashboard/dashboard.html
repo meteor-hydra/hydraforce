@@ -1,0 +1,46 @@
+<template name="dashboard">
+    <div class="card shadow" style="margin-top:-25px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3 text-center">
+                    <a href="" id="Email" class="btn btn-lg btn-info"><span class="glyphicon glyphicon-envelope"></span> Email</a>
+                </div>
+                <div class="col-xs-3 text-center">
+                    <a href="" id="Phone" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-earphone"></span> Phone</a>
+                </div>
+                <div class="col-xs-3 text-center">
+                    <a href="" id="Text" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-comment"></span> Text</a>
+                </div>
+                <div class="col-xs-3 text-center">
+                    <a href="" id="All" class="btn btn-lg btn-warning"><span class="glyphicon glyphicon-plus-sign"></span> All</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+      {{#each interactions }}
+        <div class="card shadow" style="margin-top:10px;">
+          <div class="row">
+            <div class="col-sm-1 text-center">
+              {{#if eq type "phone"}}
+                <span class="glyphicon glyphicon-earphone" style="font-size:18px;"></span>
+              {{/if}}
+              {{#if eq type "email"}}
+                <span class="glyphicon glyphicon-envelope" style="font-size:18px;"></span>
+              {{/if}}
+              {{#if eq type "text"}}
+                <span class="glyphicon glyphicon-comment" style="font-size:18px;"></span>
+              {{/if}}
+            </div>
+            <div class="col-sm-9 text-center">{{title}}</div>
+            <div class="col-sm-2 text-right"><a href="" class="btn btn-default"  data-toggle="collapse" data-target="#collapseContent{{_id}}"><span class="glyphicon glyphicon-chevron"></span>Details</a></div>
+          </div>
+          <div class="collapse" id="collapseContent{{_id}}">
+              <div class="well" style="margin-top:5px;">
+                  {{note}}
+              </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+</template>

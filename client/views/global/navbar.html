@@ -6,8 +6,7 @@
           <a class="navbar-brand" href="#">HydraForce</a>
         </div>
         <div class="col-sm-5 col-sm-offset-1 hidden-xs">
-          <input class="nav-search"/>
-          <span class="glyphicon glyphicon-search nav-search-icon"></span>
+          <input class="nav-search typeahead" placeholder="Search contacts and interactions" autocomplete="off" spellcheck="off" data-sets="typeaheadData" data-selected="onTypeaheadSelect" data-highlight="true" />
         </div>
         <div class="col-sm-3 hidden-xs">
           <ul class="nav navbar-nav navbar-right">
@@ -60,6 +59,24 @@
 
 </template>
 
-<template name="customTypeahead">
-  <p id="{{_id}}">{{ name }} </p>
+<template name="customerTypeaheadResult">
+  <div style="background-color: white; height: 40px;">
+    <div class="col-xs-1 text-center">
+      <i class="fa fa-user alert-warning interaction-icon"></i>
+    </div>
+    <div class="col-xs-11">
+      <h4 style="font-weight: 400;">{{ name }}</h4>
+    </div>
+  </div> 
+</template>
+
+<template name="interactionTypeaheadResult">
+  <div style="background-color: white; height: 40px;">
+    <div class="col-xs-1 text-center">
+      <i class="{{ iconDecoration }}"></i>
+    </div>
+    <div class="col-xs-11">
+      <h4 style="font-weight: 400;">{{ note }}</h4>
+    </div>
+  </div> 
 </template>
