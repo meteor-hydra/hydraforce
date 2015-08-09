@@ -1,0 +1,10 @@
+<template name="chevronProgression">
+    <div class="shadow">
+        <div style="height:60px" class="breadcrumb">
+            <div class="col-sm-3 arrow {{#if status=1}}leadArrow{{else}} leadArrowInactive{{/if}}"><div>Lead</div></div>
+            <div class="col-sm-3 arrow {{#if status=2}}qualifiedArrow{{else}} qualifiedArrowInactive{{/if}}"><div>Qualified</div></div>
+            <div class="col-sm-3 arrow {{#if status=3}}negotiatingArrow{{else}} negotiatingArrowInactive{{/if}}"><div>Negotiating</div></div>
+            <div class="col-sm-3 arrow {{#if status=4}}customerArrow{{else}} customerArrowInactive{{/if}}" ><div>Customer</div></div>
+        </div>
+    </div>
+</template>
