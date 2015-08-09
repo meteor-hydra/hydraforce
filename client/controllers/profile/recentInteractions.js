@@ -5,7 +5,6 @@ Template.timelineItem.helpers({
   getHeader: function(id, type){
     var customerOBJ = Contacts.findOne(id);
     var customer = 'the customer';
-    console.log(customerOBJ);
     if(customerOBJ){
       customer = customerOBJ.name;
     }
