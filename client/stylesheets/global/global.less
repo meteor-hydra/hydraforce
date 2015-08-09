@@ -1,9 +1,43 @@
+@import "./client/stylesheets/vendor/custom.bootstrap.import.less";
+
+@sidebar-width: 70px;
+@sidebar-width-inverse: -70px;
+
 body{
   background-color: #EEEEEE!important;
 }
 
 .wrapper{
-  margin-top: 80px;
+  margin-top: 65px;
+}
+.sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: @sidebar-width;
+    width: @sidebar-width;
+    height: 100%;
+    margin-left: @sidebar-width-inverse;
+    overflow-y: auto;
+    background: #232635;
+}
+
+.subnav-wrapper{
+  background: #232635;
+}
+
+@media (min-width: @screen-sm-min) {
+  .page-content-wrapper{
+    margin-left:0px;
+  }
+}
+
+.page-content-wrapper{
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  position: relative;
+  margin-right: 0;
+  margin-left:@sidebar-width;
 }
 
 .card{
@@ -11,4 +45,8 @@ body{
   width: 100%;
   padding: 25px;
   border-radius: 2px;
+}
+
+.shadow{
+   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
