@@ -33,24 +33,19 @@
 <template name="subnav">
   <div class="visible-xs subnav-wrapper">
     <div class="row">
-      <div class="col-xs-3">
+      <div class="col-xs-4">
         <div class="sidenav-item">
-          <span class="glyphicon glyphicon-dashboard sidenav-icon"></span>
+          <a href="{{pathFor 'dashboard'}}"><span class="glyphicon glyphicon-dashboard sidenav-icon"></span></a>
         </div>
       </div>
-      <div class="col-xs-3">
+      <div class="col-xs-4">
         <div class="sidenav-item">
-          <span class="glyphicon glyphicon-user sidenav-icon"></span>
+          <a href="{{pathFor 'contactList'}}"><span class="glyphicon glyphicon-user sidenav-icon"></span></a>
         </div>
       </div>
-      <div class="col-xs-3">
+      <div class="col-xs-4">
         <div class="sidenav-item">
-          <span class="glyphicon glyphicon-plus sidenav-icon"></span>
-        </div>
-      </div>
-      <div class="col-xs-3">
-        <div class="sidenav-item">
-          <span class="glyphicon glyphicon-search sidenav-icon"></span>
+          <a href="{{pathFor 'newContact'}}"><span class="glyphicon glyphicon-plus sidenav-icon"></span></a>
         </div>
       </div>
 
