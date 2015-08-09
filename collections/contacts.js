@@ -19,7 +19,10 @@ Contacts.attachSchema(new SimpleSchema({
   },
   notes : {
     type: String,
-    label: "Notes"
+    label: "Notes",
+    autoform: {
+      rows: 5
+    }
   },
   createdAt: {
     type: Date,
@@ -35,7 +38,7 @@ Contacts.attachSchema(new SimpleSchema({
         this.unset();
       }
     }
-  },
+  }
 }));
 if (Meteor.isServer) {
   // This code only runs on the server
