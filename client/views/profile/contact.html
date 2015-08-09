@@ -1,0 +1,29 @@
+<template name="contact">
+  <div class="container">
+    <div class="card shadow">
+      <div class="row">
+        <div class="col-sm-3 text-center">
+          <img src="http://www.wallpapervortex.com/ipad_air_wallpapers/ipad_air_30673_space_mission_astronaut_on_the_moon.jpg" class="circular-contact-picture content">
+          <h4><b><span class="glyphicon glyphicon-earphone"></span> {{ phone }}</b></h4>
+          <h4><b><span class="glyphicon glyphicon-envelope"></span> {{ email }}</b></h4>
+        </div>
+        <div class="col-sm-9">
+          <h1><b>{{ name }}</b> - {{ org }}</h1>
+          <h5>Customer since {{since}}</h5>
+          <hr>
+          <h4><b>Notes</b></h4>
+          <div contenteditable="true" class="contact-notes">
+            {{notes}}
+          </div>
+
+        </div>
+        <button type="button" class="btn btn-default pull-right interaction-btn" data-toggle="collapse" data-target="#interactionCollapse" aria-expanded="false" aria-controls="interactionCollapse">Add Interaction</button>
+      </div>
+      <div class="collapse" id="interactionCollapse">
+        <h4><b>Add an Interaction</b></h4>
+        {{ >quickForm collection="Interactions" id="addInteraction" type="insert"}}
+      </div>
+  </div>
+</div>
+{{> recentInteractions}}
+</template>

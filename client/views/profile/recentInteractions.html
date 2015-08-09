@@ -1,0 +1,76 @@
+<template name="recentInteractions">
+    <div class="container" style="padding-top:15px;">
+      <ul class="timeline">
+        <!-- timeline time label -->
+        <li class="time-label">
+          <span class="bg-red">
+            {{ getDate }}
+          </span>
+        </li>
+        <!-- /.timeline-label -->
+        {{#each interaction}}
+          {{> timelineItem}}
+        {{/each}}
+
+        <!-- END timeline item -->
+        <li>
+          <i class="fa fa-clock-o bg-gray"></i>
+        </li>
+      </ul>
+    </div><!-- /.col -->
+
+</template>
+
+
+<template name="timelineItem">
+  <!-- timeline item -->
+  <li>
+    <i class="fa fa-{{ pickIcon type }} bg-blue"></i>
+    <div class="timeline-item">
+      <span class="time"><i class="fa fa-clock-o"></i> {{getTimeAgo createdAt}}</span>
+      <h3 class="timeline-header"><a href="#">{{getMember salesmanID}}</a>{{getHeader contactID type}} {{name}}</h3>
+      <div class="timeline-body">
+        {{ note }}
+      </div>
+    </div>
+  </li>
+  <!-- END timeline item -->
+</template>
+
+
+<template name="phone">
+  <li>
+    <i class="fa fa-phone bg-yellow"></i>
+    <div class="timeline-item">
+      <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
+      <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
+      <div class="timeline-body">
+        Take me to your leader!
+        Switzerland is small and neutral!
+        We are more like Germany, ambitious and misunderstood!
+      </div>
+      <div class="timeline-footer">
+        <a class="btn btn-warning btn-flat btn-xs">View comment</a>
+      </div>
+    </div>
+  </li>
+</template>
+
+
+<template name="text">
+  <li>
+    <i class="fa fa-comments bg-yellow"></i>
+    <div class="timeline-item">
+      <span class="time"><i class="fa fa-clock-o"></i> 27 mins ago</span>
+      <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
+      <div class="timeline-body">
+        Take me to your leader!
+        Switzerland is small and neutral!
+        We are more like Germany, ambitious and misunderstood!
+      </div>
+      <div class="timeline-footer">
+        <a class="btn btn-warning btn-flat btn-xs">View comment</a>
+      </div>
+    </div>
+  </li>
+</template>

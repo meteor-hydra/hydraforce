@@ -1,4 +1,11 @@
 <template name="layout">
-  <h3>Router works!</h3>
-  {{> yield}}
+  {{> navbar}}
+  {{> sidenav }}
+
+  <div class="wrapper">
+    {{> subnav}}
+    <div class="page-content-wrapper content-shadow">
+      {{> yield}}
+    </div>
+  </div>
 </template>
