@@ -1,5 +1,63 @@
 <template name="landing">
-  <div class="container">
-    {{> loginButtons}}
-  </div>
+	<div class="container-fluid landing-container">
+    	<div class="row">
+    		<div class="card login-card col-lg-offset-6 col-lg-4">
+    			{{#if signupflow}}
+    				{{> signup}}
+    			{{else}}
+    				{{> signin}}
+    			{{/if}}
+    		</div>
+    	</div>
+  	</div>
+</template>
+
+<template name="signup">
+	<form>
+		<h2 style="text-align: center; margin: 0;" class="log-text">Sign Up!</h2>
+		<div class="form-group">
+			<label for="inputEmail" class="col-lg-3 log-text">Email</label>
+			<div class="col-lg-9">
+				<input type="email" name="email" class="form-control" id="focused" placeholder="example@domain.com">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="inputPassword" class="col-lg-3 log-text">Password</label>
+			<div class="col-lg-9">
+				<input type="password" name="password" class="form-control" id="focused" placeholder="password...">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="inputConfirm" class="col-lg-3 log-text">Confirm Password</label>
+			<div class="col-lg-9">
+				<input type="password" name="confirm" class="form-control" id="focused" placeholder="password...">
+			</div>
+			<div class="pull-right">
+				<input role="button" type="submit" id="signupSubmit" class="btn btn-primary btn-raised signup-button" value="Sign Up" style="margin-right: 15px;"/>
+			</div>
+		</div>
+	</form>
+</template>
+
+
+<template name="signin">
+	<form>
+		<h2 style="text-align: center;" class="log-text">Sign In!</h2>
+		<div class="form-group">
+			<label for="inputEmail" class="col-lg-3 log-text">Email</label>
+			<div class="col-lg-9">
+				<input type="email" name="email" class="form-control" id="focused" placeholder="example@domain.com">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="inputPassword" class="col-lg-3 log-text">Password</label>
+			<div class="col-lg-9">
+				<input type="password" name="password" class="form-control" id="focused" placeholder="password...">
+			</div>
+			<div class="pull-right">
+				<input role="button" type="submit" id="signupSubmit" class="btn btn-primary btn-raised signup-button" value="Sign In" style="margin-right: 15px;"/>
+			</div>
+		</div>
+	</form>
+
 </template>
