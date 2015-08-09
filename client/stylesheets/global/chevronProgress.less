@@ -1,0 +1,138 @@
+arrow:before{
+  content: " ";
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px;
+	margin-left: 1px;
+	left: 100%;
+	z-index: 1;
+}
+
+.arrow:after {
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+  border-bottom: 50px solid transparent;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  left: 100%;
+  z-index: 2;
+}
+
+.arrow {
+  padding-left: 0;
+  padding-right:0;
+  padding-top:10px;
+  margin-top:0px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  height:60px;
+  font-size: 18px;
+}
+
+.leadArrow{
+  background-color: gray;
+  color: white;
+}
+
+.qualifiedArrow{
+  background-color: #3F51B5;
+  color: white;
+}
+
+.leadArrow:before {
+	border-left: 40px solid gray;
+}
+.leadArrow:after {
+	border-left: 40px solid gray;
+}
+
+.qualifiedArrow:before {
+	border-left: 40px solid #3F51B5;
+}
+.qualifiedArrow:after {
+	border-left: 40px solid #3F51B5;
+}
+
+.negotiatingArrow{
+  background-color: #C17257;
+  color: white;
+}
+
+.negotiatingArrow:before {
+	border-left: 40px solid #C17257;
+}
+.negotiatingArrow:after {
+	border-left: 40px solid #C17257;
+}
+
+.negotiatingArrowInactive{
+  background-color: #ffe9e9;
+  color: black;
+}
+
+.redArrowInactive:before {
+	border-left: 40px solid #ffe9e9;
+}
+.redArrowInactive:after {
+	border-left: 40px solid #ffe9e9;
+}
+
+.qualifiedArrowInactive{
+  background-color: #e9e9ff;
+  color: black;
+}
+
+.qualifiedArrowInactive:before {
+	border-left: 40px solid #e9e9ff;
+}
+.qualifiedArrowInactive:after {
+	border-left: 40px solid #e9e9ff;
+}
+
+.leadArrowInactive{
+  background-color: #e9e9e9;
+  color: black;
+}
+
+.leadArrowInactive:before {
+	border-left: 40px solid #e9e9e9;
+}
+.leadArrowInactive:after {
+	border-left: 40px solid #e9e9e9;
+}
+.customerArrow{
+  background-color: green;
+  color: white;
+}
+
+.customerArrowInactive{
+  background-color: #e9ffe9;
+  color: Black;
+}
+
+.breadcrumb {
+	overflow: hidden;
+  padding-left: 0!important;
+  padding-top: 0!important;
+  padding-right:0!important;
+  height:60px!important;
+}
+.breadcrumb div {
+	float: left;
+}
+.breadcrumb div div {
+	padding: 10px 0 10px 40px;
+	position: relative;
+	display: block;
+	float: left;
+}
