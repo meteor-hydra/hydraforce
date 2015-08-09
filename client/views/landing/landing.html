@@ -2,7 +2,11 @@
 	<div class="container-fluid landing-container">
     	<div class="row">
     		<div class="card login-card col-lg-offset-6 col-lg-4">
-    			{{#if signupflow}}
+    			<div class="btn-group" role="group" aria-label="Sign In or Sign Up">
+					  <button type="button" class="btn btn-default signin-btn">Sign In</button>
+					  <button type="button" class="btn btn-default signup-btn">Sign Up</button>
+					</div>
+    			{{#if session 'signupflow' }}
     				{{> signup}}
     			{{else}}
     				{{> signin}}
@@ -14,7 +18,8 @@
 
 <template name="signup">
 	<form>
-		<h2 style="text-align: center; margin: 0;" class="log-text">Sign Up!</h2>
+		<h2 style="text-align: center; margin: 0;" class="log-text">Sign Up</h2>
+		<br>
 		<div class="form-group">
 			<label for="inputEmail" class="col-lg-3 log-text">Email</label>
 			<div class="col-lg-9">
@@ -42,7 +47,7 @@
 
 <template name="signin">
 	<form>
-		<h2 style="text-align: center;" class="log-text">Sign In!</h2>
+		<h2 style="text-align: center;" class="log-text">Sign In</h2>
 		<div class="form-group">
 			<label for="inputEmail" class="col-lg-3 log-text">Email</label>
 			<div class="col-lg-9">
