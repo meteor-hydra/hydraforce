@@ -1,4 +1,18 @@
-Interactions = new Mongo.Collection("interactions");
+Interactions = new Mongo.Collection("interactions", {
+  transform:
+    function (doc) {
+      if (doc.type == "email") {
+        doc.iconDecoration = "fa fa-envelope alert-info interaction-icon";
+      } else if (doc.type == "phone") {
+        doc.iconDecoration = "fa fa-phone alert-danger interaction-icon";
+      } else if (doc.type == "text") {
+        doc.iconDecoration = "fa fa-comments alert-success interaction-icon";
+      }
+      return doc;
+    }
+  }
+);
+
 Interactions.attachSchema(new SimpleSchema({
   createdAt: {
     type: Date,
